@@ -1,0 +1,7 @@
+:host{
+  display: flex;
+  height: 100%;
+}
+.nestedContent{
+  margin: auto;
+}
