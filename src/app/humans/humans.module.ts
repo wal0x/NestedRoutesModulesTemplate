@@ -3,11 +3,23 @@ import { CommonModule } from '@angular/common';
 import { HumansComponent } from './humans.component';
 import { MalesComponent } from './males/males.component';
 import { FemalesComponent } from './females/females.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HumansComponent, MalesComponent, FemalesComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {
+          path: 'humans',
+          component: HumansComponent,
+          children: [
+              { path: 'males', component: MalesComponent },
+              { path: 'females', component: FemalesComponent },
+              { path: '', redirectTo: 'males', pathMatch: 'full' }
+          ]
+      }
+  ])
   ]
 })
 export class HumansModule { }

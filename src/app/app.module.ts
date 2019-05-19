@@ -12,9 +12,9 @@ import { AliensModule } from './aliens/aliens.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HumansModule,
-    AliensModule
+    AliensModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

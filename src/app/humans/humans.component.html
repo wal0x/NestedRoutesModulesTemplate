@@ -1,3 +1,10 @@
-<p>
-  humans works!
-</p>
+<nav>
+  <ul>
+    <li [routerLink]="['males']" routerLinkActive="router-link-active" >Males</li>
+    <li [routerLink]="['females']" routerLinkActive="router-link-active" >Females</li>
+  </ul>
+</nav>
+<div class="mainContent">
+  <p>Humans rule!</p>
+  <router-outlet></router-outlet>
+</div>
