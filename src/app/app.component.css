@@ -1,0 +1,32 @@
+header {
+  height: 50px;
+  background-color: #1a237e;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #283593;
+  height: 50px;
+}
+.tab:hover{
+  background-color: #3949AB;
+}
+.tab>p {
+  cursor: pointer;
+}
+.tab>p:focus {
+  outline: none;
+}
+.tab>p.router-link-active {
+  color: #7986CB;
+}

@@ -1,2 +1,8 @@
-<router-outlet></router-outlet>
-
+<header>
+  <div class="title">Nested Routes and Modules Template</div>
+  <div class="tab"><p [routerLink]="['/aliens']" routerLinkActive="router-link-active" >Aliens</p></div>
+  <div class="tab"><p [routerLink]="['/humans']" routerLinkActive="router-link-active" >Humans</p></div>
+</header>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

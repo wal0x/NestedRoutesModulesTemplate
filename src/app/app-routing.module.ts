@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { AppComponent } from './app.component';
+import { AliensComponent } from './aliens/aliens.component';
+import { HumansComponent } from './humans/humans.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: '**', redirectTo: 'welcome' }
+  { path: '', component: AliensComponent },
+  { path: 'aliens', component: AliensComponent },
+  { path: 'humans', component: HumansComponent },
+  { path: '**', redirectTo: 'aliens' }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
